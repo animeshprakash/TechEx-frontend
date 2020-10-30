@@ -13,20 +13,21 @@
 <body>
     <nav class="navbar transparent" id="menu">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link">Home</a></li>
-            <li class="nav-item"><a class="nav-link">About</a></li>
-            <li class="nav-item"><a class="nav-link">Events</a></li>
-            <li class="nav-item"><a class="nav-link">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="#s1">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#s2">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#s3">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#s5">Register</a></li>
         </ul>
     </nav>
     <div id="fullpage">
         
         <div class="section" id="s1">
-            <img src="img/techexlogo.svg" alt="TechEx" width="25%" style="position: relative; top:30%;" id="logo">
-            <p id="logoTag"><b>An introduction to everthing!</b></p>
-            <p style="position: relative; top: 275px;" id="scroll">Scroll Down</br><i class="fas fa-chevron-circle-down"></i>
+            <div style="position: relative; top:30%;" id="logo">
+                <img src="img/techexlogo.svg" alt="TechEx" width="25%" id="logosvg">
+                <p id="logoTag"><b>An introduction to everthing!</b></p>
+            </div>
+            <p id="scroll">Scroll Down</br><i class="fas fa-chevron-circle-down"></i>
             </p>
-
         </div>
         <div class="section" >
             <div class="sectionContainer" id="s2" >
@@ -81,6 +82,9 @@
     src="https://kit.fontawesome.com/fc31dedf63.js"
     crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
+        crossorigin="anonymous"></script>
     <script src="App.js"></script>
 </body>
 </html>

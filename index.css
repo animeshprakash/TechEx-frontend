@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -17,8 +20,9 @@ nav{
     position: relative;
 }
 #logoTag{
-    position: relative;
-    top:25.5%;
+    position: absolute;
+    left: 41%;
+    top:77%;
 }
 #sec1content{
     max-width: 600px;
@@ -48,6 +52,11 @@ nav li{
    background-repeat: no-repeat;
    background-size: cover;
    text-align: center;
+}
+#scroll{
+    position: relative; 
+    top: 275px;
+    opacity: 0;
 }
 #s2{
     top: 50px;
@@ -82,23 +91,45 @@ a:hover{
         background-image: none;
     }
     #logoTag{
-        top: 27%;
+        top: 78%;
         font-size: 0.6em;
     }
     #scroll{
         font-size: 0.6em;
     }
+    #logo{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 768px){
     #logo{
-        width: 30%;
+        width: 100%;
     }
     #s1{
         background-image: none;
     }
     #logoTag{
-        top: 28%;
+        top: 75%;
+        font-size: 0.5em;
+    }
+    #scroll{
         font-size: 0.3em;
+    }
+}
+@media screen and (max-width: 540px){
+    #logo{
+        width: 100%;
+    }
+    #s1{
+        background-image: none;
+    }
+    #logosvg{
+        width: 35%;
+    }
+    #logoTag{
+        top: 75%;
+        left: 37%;
+        font-size: 0.5em;
     }
     #scroll{
         font-size: 0.3em;
