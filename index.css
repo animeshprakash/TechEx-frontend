@@ -18,32 +18,74 @@ nav{
 }
 .section{
     position: relative;
+   
     
 }
+
+
 .bg{
+    
     background-color: #f58c57;
-    width: 2000px;
+    width: 2132px;
     height: 70%;
     top: 15%;
-    margin-left: -300vw;
-    padding-left: 300vw;
-    margin-right: -300vw;
-    padding-right: 300vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: -106px;
+    padding-left: 185px;
+    margin-right: -106px;
+    padding-right: 185px;
+    min-height: 600px;
     position: absolute;
 }
+
+
+
+.sectionContainer{
+    z-index: 1;
+    margin-top:20%;
+    margin-left: 135px;
+    margin-right: 135px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1260px ;
+    padding: 0 185px;
+    font-size: 120%;
+    top: 0;
+    position: absolute;
+    rotate: 0;
+}
+.sectionContainer>div>h1{
+    font-size: 500%; 
+    padding: 0;
+    margin: 0;
+}
+
+.sectionContainer#s2{
+    justify-content: flex-end;
+}
+
+.sectionContainer#s4{
+    justify-content: flex-end;
+}
+
+.sectionContainer>div>p{
+    max-width: 600px;
+}
+
+
+
 #logoTag{
     position: absolute;
     left: 41%;
     top:77%;
 }
 #sec1content{
-    max-width: 600px;
+    max-width: 700px;
 }
 
-.sectionContainer{
-    position: absolute;
-    
-}
 nav ul{
     display: flex;
     justify-content: space-around;
@@ -70,24 +112,22 @@ li{
     top: 275px;
     opacity: 0;
 }
-#s2{
+/* #s2{
     top: 50%;
     right: 50%;
-}
-#s3{
+} */
+/* #s3{
     top: 20%;
     left: 50px;
-}
+} */
 .navbar-brand{
     color: #f58c57;
 }
-#s4{
+/* #s4{
     top: 20%;
     left: 30%;
-}
-#s4 p{
-    max-width: 700px;
-}
+} */
+
 a{
     text-decoration: none;
 }
@@ -96,14 +136,20 @@ a:hover{
     text-decoration: none;
 }
 #phoneImg{
-    position: relative;
-    top: 20%;
+    position: absolute;
+    left :20vw;
+    height: 90%;
+    width: auto;
 }
-#controllerImg{
-    position: relative;
-    left: 60%;
-    top: 30%;
-}
+
+#controllerImg{ 
+    /* padding-left: 200px; */
+    position: absolute;
+    left :50vw;
+    height: 90%;
+    width: auto;
+ }
+
 @media screen and (max-width: 1024px){
     #logo{
         width: 30%;
