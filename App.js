@@ -1,3 +1,4 @@
+const noRotate = document.querySelector("#s1.section");
 new fullpage('#fullpage',{
     menu: '#menu',
     navigation: true,
@@ -14,17 +15,14 @@ new fullpage('#fullpage',{
         if(startPoint===noRotate || direction=='up'){
             back.pause()
         }else{
-            back.resume()
             back.fromTo('.bg',{rotation: -5},{rotation: 1,duration: 1,delay: 0.3});
-            back.fromTo('.sectionContainer',{opacity:0, y:'-10%'},{opacity:1, y:'0',duration: 1},"-=0.8")
-            document.getElementById("phoneImg").focus = ()=>{
-                
-            }
+            back.fromTo('.sectionContainer',{opacity:0, y:'-10%',},{opacity:1, y:'0',duration: 1},"-=0.8")
+            back.fromTo('#controllerImg',{opacity: 0, y:'-50%',rotation: -0.5},{opacity:0.5, y:'20%',rotation: 40,duration: 1},"-=0.8")
+            back.fromTo('#phoneImg',{rotation: 0,y:'-30%'},{rotation: 30,y:'0',duration: 1},'-=1.5')
         }
     }
 });
 const timeline = gsap.timeline({defaults:{ease:"power1.out"}});
-const noRotate = document.querySelector("#s1.section");
 timeline.fromTo("nav",{opacity: 0},{opacity: 1,duration: 1.5,})
     .to("#scroll",{opacity:1, duration: 1,delay:.3},"-=1")
     .fromTo("#logo",{opacity:0 ,y:"+3%"},{opacity:1,y:"0%",duration: 0.4},"-=1.3");
