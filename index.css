@@ -55,7 +55,8 @@ body{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 1260px ;
+    max-width: 1260px ;
+    width: 90%;
     padding: 0px;
     max-height: 500px;
     font-size: 120%;
