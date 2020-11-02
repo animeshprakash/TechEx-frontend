@@ -8,10 +8,10 @@ const findSec = (index) =>{
     }
 }
 new fullpage('#fullpage',{
-    //anchors:['page1','page2','page3','page4','register'], Fucks up the code for some reason.
+    
+    css3:true,
+    anchors:['firstpage','secondpage','thirdpage','fourthpage','fifthpage'],
     menu: '#menu',
-    navigation: true,
-    navigationPosition: 'right',
     autoScrolling:true,
     scrollHorizontally: true,
     paddingTop:'30px',
