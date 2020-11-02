@@ -11,19 +11,11 @@
     <title>TechEx 2020</title>
 </head>
 <body>
-    <nav class="navbar transparent" id="menu">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#page1">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#page2">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#page3">Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="#s5">Register</a></li>
-        </ul>
-    </nav>
     <div id="fullpage">
         
         <div class="section sec1" id="page1">
             <div style="position: relative; top:30%;" id="logo">
-                <img src="img/techexlogo.png" alt="TechEx" width="25%" id="logosvg">
+                <img src="img/techexlogo.png" alt="TechEx"  id="logosvg">
                 <p id="logoTag"><b>An introduction to everthing!</b></p>
             </div>
             <p id="scroll">Scroll Down</br><i class="fas fa-chevron-circle-down"></i>
@@ -42,7 +34,7 @@
                    </br></br>
                     Pygame- Build games with Python, one of the most popular programming languages in the world!  
                 </p>
-            </div>
+                </div>
             </div>
         </div>
 
@@ -89,74 +81,102 @@
          </div>
          <!-- REGISTRATION FORM AND STUFF -->
          <div class="section sec5" id="register" style="background-color: #f58c57;">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                  <div class="numbertext">1 / 10</div>
-                  <img src="./img/slideshow/img1.JPG" style="width:100%">
-                  <div class="text">Here's some glimpse of TechEx 2019</div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 10</div>
+                    <img src="./img/slideshow/img1.JPG" style="width:100%">
+                    <div class="text"><span style="background-color: black;">Here's some glimpse of TechEx 2019</span></div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 10</div>
+                        <img src="./img/slideshow/img2.jpg" style="width:55%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 10</div>
+                        <img src="./img/slideshow/img3.jpg" style="width:100%">
+                        <div class="text"><span style="background-color: black; 
+                            padding: 0 2px;">TechEx workshop on Video Editing by Rishab Mandhana</span></div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 10</div>
+                        <img src="./img/slideshow/img4.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 10</div>
+                        <img src="./img/slideshow/img5.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 10</div>
+                        <img src="./img/slideshow/img6.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 10</div>
+                        <img src="./img/slideshow/img7.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">8 / 10</div>
+                        <img src="./img/slideshow/img8.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">9 / 10</div>
+                        <img src="./img/slideshow/img9.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">10 / 10</div>
+                        <img src="./img/slideshow/img5.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
                 </div>
-                
-                <div class="mySlides fade">
-                  <div class="numbertext">2 / 10</div>
-                  <img src="./img/slideshow/img2.jpg" style="width:80%">
-                  <div class="text"></div>
+                    <!--<div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(7)"></span> 
+                    <span class="dot" onclick="currentSlide(8)"></span> 
+                    <span class="dot" onclick="currentSlide(9)"></span> 
+                    <span class="dot" onclick="currentSlide(10)"></span> 
+                </div>-->
+                <div id="registerForm">
+                    <h1><b>Interested? Let's get you registered!</b></h1>
+                    <form method="POST" action="">
+                        <input type="text" name="name" placeholder="Enter you name"/>
+                        <input type="email" name="email" placeholder="Email ID"/>
+                        <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Mobile Number"/>
+                        <input type="password" name="password" placeholder="Enter password"/>
+                        <input type="password" name="confirmedPassword" placeholder="Re-enter your password"/>
+                        </br>
+                        <input type="submit" value="Register!">
+                    </form>
                 </div>
-                
-                <div class="mySlides fade">
-                  <div class="numbertext">3 / 10</div>
-                  <img src="./img/slideshow/img3.jpg" style="width:100%">
-                  <div class="text">Caption Three</div>
+                <div id="aboutCSI">
+                    <p style="width: 80%; text-align: justify; max-width: 40%;">
+                        The Computer Society of India is the largest body of non-profit computer professionals
+                        in India. We are a group of skilled desginers, developers, and tech enthusiasts who 
+                        engage in pushing technology forward. We organise a wide range of workshops, conferences,
+                        competitions and non-technical events to facilitate the growth of participants. 
+                    </p>
+                    <p style="color: white;">Visit out website <a href="https://csivit.com/">csivit.com</a>
+                        to see more of who we are and what work we do.
+                    </p>
                 </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">4 / 10</div>
-                    <img src="./img/slideshow/img4.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">5 / 10</div>
-                    <img src="./img/slideshow/img5.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">6 / 10</div>
-                    <img src="./img/slideshow/img6.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">7 / 10</div>
-                    <img src="./img/slideshow/img7.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">8 / 10</div>
-                    <img src="./img/slideshow/img8.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">9 / 10</div>
-                    <img src="./img/slideshow/img9.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">10 / 10</div>
-                    <img src="./img/slideshow/img5.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-                
-                </div>
-                <!--<div style="text-align:center">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span> 
-                  <span class="dot" onclick="currentSlide(4)"></span> 
-                  <span class="dot" onclick="currentSlide(5)"></span> 
-                  <span class="dot" onclick="currentSlide(5)"></span> 
-                  <span class="dot" onclick="currentSlide(7)"></span> 
-                  <span class="dot" onclick="currentSlide(8)"></span> 
-                  <span class="dot" onclick="currentSlide(9)"></span> 
-                  <span class="dot" onclick="currentSlide(10)"></span> 
-            </div>-->
-         </div>
+        </div>
+        <!--<ul class="navbar-nav" id="menu">
+            <li data-menuanchor="page1" class="active"><a class="nav-link" href="#page1">Home</a></li>
+            <li data-menuanchor="page2"><a class="nav-link" href="#page2">About</a></li>
+            <li data-menuanchor="page3"><a class="nav-link" href="#page3">Events</a></li>
+            <li data-menuanchor="register"><a class="nav-link" href="#register">Register</a></li>
+        </ul>-->
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" 

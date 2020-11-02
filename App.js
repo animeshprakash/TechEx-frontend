@@ -8,6 +8,7 @@ const findSec = (index) =>{
     }
 }
 new fullpage('#fullpage',{
+    //anchors:['page1','page2','page3','page4','register'], Fucks up the code for some reason.
     menu: '#menu',
     navigation: true,
     navigationPosition: 'right',
@@ -19,22 +20,13 @@ new fullpage('#fullpage',{
         let sec = findSec(destination.index);
         let secPrev = findSec(origin.index);
         const back = gsap.timeline({defaults:{ease:"power1.out"}});
-        const startPoint = destination.item;
         if(destination.isFirst){
             back.pause()
         }else if(direction==="down"){
-            if(!(destination.isLast )){
-
-            // back.fromTo('.sectionContainer',{rotation: 5},{rotation: 0,duration: 1,delay: 0.7});
-            back.fromTo(sec,{rotation: -5},{rotation: 0,duration: 1,delay: 0.7});
-    
-            } 
-
-            if(!(origin.isFirst)){
-                // back.fromTo('.sectionContainer',{rotation: -5},{rotation: 0,duration: 1,delay: 0.7},"-=1.7");
-                back.fromTo(secPrev,{rotation: 0},{rotation: 5,duration: 1,delay: 0},'-=1.7'); 
-            } 
-
+            if(!(destination.isLast ))
+                back.fromTo(sec,{rotation: -5},{rotation: 1,duration: 1,delay: 0.7});
+            if(!(origin.isFirst))
+               back.fromTo(secPrev,{rotation: 0},{rotation: 5,duration: 1,delay: 0},'-=1.7'); 
         }
         else if(direction==="up"){
             if(!(destination.isFirst)){
@@ -43,12 +35,12 @@ new fullpage('#fullpage',{
             back.fromTo(sec,{rotation: 5},{rotation: 0,duration: 1,delay: 1});
                 if(!(origin.isLast)){
                 back.fromTo(secPrev,{rotation: 0},{rotation: -5,duration: 1,delay: 0});   
+                }else{
+                    //showSlides();
                 }
             } 
         }
-    }
-
-    
+    }  
 });
 
 fullpage_api.setScrollingSpeed(1000);
@@ -87,7 +79,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 // Automating the slideshow
-showSlides();
+
 function syncSetTimeout(func, ms, callback) {
     (function sync(done) {
         if (!done) {
@@ -111,6 +103,6 @@ function showSlides() {
   console.log("slideIndex-1 is "+(slideIndex-1));
   slides[slideIndex-1].style.display = "block";
    // Change image every 2 seconds
-   syncSetTimeout(showSlides,2000,showSlides);
+   syncSetTimeout(showSlides,4000,showSlides);
    sleep(2000);
 }

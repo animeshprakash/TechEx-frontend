@@ -6,7 +6,7 @@ body{
     padding: 0;
     font-family: Helvetica;
 }
-nav{
+#menu{
     position: fixed;
     display: flex;
     top: 0;
@@ -16,15 +16,23 @@ nav{
     background-color: transparent;
     justify-items: space-around;
 }
+#logo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#logosvg{
+    max-height: 25vh;   
+}
 .section{
     position: relative;
-   
+    margin-bottom: 30px;
     
 }
-
-
 .bg{
-    
     background-color: #f58c57;
     width: 2132px;
     height: 70%;
@@ -47,7 +55,6 @@ nav{
     justify-content: flex-start;
     align-items: center;
     width: 1260px ;
-    background-color: blue;
     padding: 0px;
     max-height: 500px;
     font-size: 120%;
@@ -72,25 +79,20 @@ nav{
 .sectionContainer>div>p{
     max-width: 600px;
 }
-
-
-
-#logoTag{
+#aboutCSI{
     position: absolute;
-    left: 41%;
-    top:77%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
 #sec1content{
     max-width: 700px;
 }
-
-nav ul{
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-} 
 li{
-    list-style-type: none;
+    list-style: none;
 }
 .nav-link{
     color: black;
@@ -106,8 +108,9 @@ li{
    text-align: center;
 }
 #scroll{
-    position: relative; 
-    top: 275px;
+    position: absolute; 
+    left: 45%;
+    bottom: 10%;
     opacity: 0;
 }
 /* #s2{
@@ -148,30 +151,58 @@ height: 90%;
 width: auto;
 }
 
-input[type=email]{
+input[type=email], input[type=text],input[type=password],input[type=tel]{
     border: none;
+    width: 50%;
     border-bottom: 2px solid #7e7e7e;
+    color: white;
+    background-color: transparent;
 }
-input[type=text]{
-    border: none;
-    border-bottom: 2px solid #7e7e7e;
+input{
+    padding: 10px;
+    margin: 10px;
 }
-input[type=email]:focus{
-    border: none;
+input[type=submit]{
+    border-radius: 4px;
+    border: 0;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color:white;
+}
+
+
+
+
+
+#registerForm{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+}
+form{
+    grid-column: span;
 }
 @media screen and (max-width: 1024px){
-    #logo{
+    #logosvg{
         width: 30%;
     }
     #page1{
         background-image: none;
     }
-    #logoTag{
-        top: 78%;
-        font-size: 0.6em;
-    }
     #scroll{
-        font-size: 0.6em;
+        font-size: 1em;
     }
     #logo{
         width: 100%;
@@ -184,40 +215,45 @@ input[type=email]:focus{
     #page1{
         background-image: none;
     }
-    #logoTag{
-        top: 75%;
-        font-size: 0.5em;
-    }
     #scroll{
         font-size: 0.3em;
     }
 }
 @media screen and (max-width: 540px){
-    #logo{
-        width: 100%;
-    }
     #page1{
         background-image: none;
     }
     #logosvg{
-        width: 35%;
-    }
-    #logoTag{
-        top: 75%;
-        left: 37%;
-        font-size: 0.5em;
+        width: 60%;
     }
     #scroll{
-        font-size: 0.3em;
+        left: 38%;
+        font-size: 1em;
+    }
+    #controllerImg{
+        left: -30vw;
+    }
+    .sectionContainer{
+        justify-content: flex-start;
+        font-size: 0.8em;
+        width: 95%;
+        left: 0;
+        padding: 12px;
+    }
+    #aboutCSI{
+        flex-direction: column;
+    }
+    input[type=email], input[type=text],input[type=password],input[type=tel]{
+        width: 85%;
     }
 }
 
 /*For the slideshow*/
 .slideshow-container {
-    width: 300px;
-    max-height: 600px;
-    border: 10px solid;
-    position: relative;
+    width: 40%;
+    position: absolute;
+    top: 8%;
+    left: 30px;
     margin: auto;
   }
   
@@ -255,7 +291,7 @@ input[type=email]:focus{
   
   /* Caption text */
   .text {
-    color: #754f4f;
+    color: white;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
