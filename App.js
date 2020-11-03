@@ -11,6 +11,7 @@ new fullpage('#fullpage',{
     
     css3:true,
     anchors:['firstpage','secondpage','thirdpage','fourthpage','fifthpage'],
+    scrollOverflow: true,
     menu: '#menu',
     autoScrolling:true,
     scrollHorizontally: true,
