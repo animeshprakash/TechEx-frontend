@@ -12,6 +12,7 @@ new fullpage('#fullpage',{
     css3:true,
     anchors:['firstpage','secondpage','thirdpage','fourthpage','fifthpage'],
     scrollOverflow: true,
+    scrollingSpeed:2000,
     menu: '#menu',
     autoScrolling:true,
     scrollHorizontally: true,
@@ -44,7 +45,7 @@ new fullpage('#fullpage',{
     }  
 });
 
-fullpage_api.setScrollingSpeed(1000);
+// fullpage_api.setScrollingSpeed(1000);
 const timeline = gsap.timeline({defaults:{ease:"power1.out"}});
 timeline.fromTo("nav",{opacity: 0},{opacity: 1,duration: 1.5,})
     .to("#scroll",{opacity:1, duration: 1,delay:.3},"-=1")
