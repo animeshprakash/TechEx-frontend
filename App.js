@@ -7,44 +7,44 @@ const findSec = (index) =>{
         case 4 : return(".sec5");break;
     }
 }
-new fullpage('#fullpage',{
-    
-    css3:true,
-    anchors:['firstpage','secondpage','thirdpage','fourthpage','fifthpage'],
-    scrollOverflow: true,
-    scrollingSpeed:2000,
-    menu: '#menu',
-    autoScrolling:true,
-    scrollHorizontally: true,
-    paddingTop:'30px',
-    parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-    onLeave: (origin,destination,direction)=>{
-        let sec = findSec(destination.index);
-        let secPrev = findSec(origin.index);
-        const back = gsap.timeline({defaults:{ease:"power1.out"}});
-        if(destination.isFirst){
-            back.pause()
-        }else if(direction==="down"){
-            if(!(destination.isLast ))
-                back.fromTo(sec,{rotation: -5},{rotation: 1,duration: 1,delay: 0.7});
-            if(!(origin.isFirst))
-               back.fromTo(secPrev,{rotation: 0},{rotation: 5,duration: 1,delay: 0},'-=1.7'); 
-        }
-        else if(direction==="up"){
-            if(!(destination.isFirst)){
-
-            // back.fromTo('.sectionContainer',{rotation: -5},{rotation: 0,duration: 1,delay: 0.7});    
-            back.fromTo(sec,{rotation: 5},{rotation: 0,duration: 1,delay: 1});
-                if(!(origin.isLast)){
-                back.fromTo(secPrev,{rotation: 0},{rotation: -5,duration: 1,delay: 0});   
-                }else{
-                    //showSlides();
-                }
-            } 
-        }
-    }  
-});
-
+window.onload=()=>{
+    new fullpage('#fullpage',{
+        
+        css3:true,
+        anchors:['firstpage','secondpage','thirdpage','fourthpage','fifthpage'],
+        scrollOverflow: true,
+        scrollingSpeed:2000,
+        menu: '#menu',
+        autoScrolling:true,
+        scrollHorizontally: true,
+        paddingTop:'30px',
+        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+        onLeave: (origin,destination,direction)=>{
+            let sec = findSec(destination.index);
+            let secPrev = findSec(origin.index);
+            const back = gsap.timeline({defaults:{ease:"power1.out"}});
+            if(destination.isFirst){
+                back.pause()
+            }else if(direction==="down"){
+                if(!(destination.isLast))
+                    back.fromTo(sec,{rotation: -5},{rotation: 3,duration: 1,delay: 0.7});
+                // if(!(origin.isFirst))
+                //     back.fromTo(secPrev,{rotation: 3},{rotation: 1,duration: 1,delay: 0},'-=1.7'); 
+            }
+            else if(direction==="up"){
+                if(!(destination.isFirst)){
+                // back.fromTo('.sectionContainer',{rotation: -5},{rotation: 0,duration: 1,delay: 0.7});    
+                    back.fromTo(sec,{rotation: 1},{rotation: -3,duration: 1,delay: 1});
+                    // if(!(origin.isLast)){
+                    //     back.fromTo(secPrev,{rotation: 3},{rotation: -1,duration: 1,delay: 0});   
+                    // }
+                } 
+            }
+            if(destination.isLast)
+                showSlides(0);
+        }  
+    });
+}
 // fullpage_api.setScrollingSpeed(1000);
 const timeline = gsap.timeline({defaults:{ease:"power1.out"}});
 timeline.fromTo("nav",{opacity: 0},{opacity: 1,duration: 1.5,})
@@ -53,7 +53,7 @@ timeline.fromTo("nav",{opacity: 0},{opacity: 1,duration: 1.5,})
 
 // Code for the slideshow
 var slideIndex = 0;
-showSlides(slideIndex);
+//showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -82,7 +82,7 @@ function showSlides(n) {
 }
 // Automating the slideshow
 
-function syncSetTimeout(func, ms, callback) {
+function syncSetTimeout(func, ms) {
     (function sync(done) {
         if (!done) {
             setTimeout(function() {
@@ -91,7 +91,6 @@ function syncSetTimeout(func, ms, callback) {
             }, ms);
             return;
         }
-        callback.apply(callback);
     })();
 }
 function showSlides() {
@@ -105,6 +104,5 @@ function showSlides() {
   console.log("slideIndex-1 is "+(slideIndex-1));
   slides[slideIndex-1].style.display = "block";
    // Change image every 2 seconds
-   syncSetTimeout(showSlides,4000,showSlides);
-   sleep(2000);
+   syncSetTimeout(showSlides,3000);
 }
