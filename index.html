@@ -145,14 +145,15 @@
                     <div id="registerForm">
                         <h1><b>Interested? Let's get you registered!</b></h1>
                         <form method="POST" action="">
-                            <input type="text" name="name" placeholder="Enter you name"/>
-                            <input type="email" name="email" placeholder="Email ID"/>
-                            <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Mobile Number"/>
-                            <input type="password" name="password" placeholder="Enter password"/>
-                            <input type="password" name="confirmedPassword" placeholder="Re-enter your password"/>
+                            <input type="text" name="name" placeholder="Enter you name" id="name"/>
+                            <input type="email" name="email" placeholder="Email ID" id="email"/>
+                            <input type="tel" name="mobile" pattern="[1-9][0-9]{9}" placeholder="Mobile Number" id="mobile"/>
+                            <input type="password" name="password" placeholder="Enter password" id="password"/>
+                            <input type="password" name="confirmedPassword" placeholder="Re-enter your password" id="rePassword"/>
                             </br>
                             <div class="g-recaptcha" data-sitekey="6LdOnN4ZAAAAANbDp_hRP0r51cJGsmOBMPjbOiMq"></div>
                             <input type="submit" value="REGISTER">
+                            <div id="spitErrors" style="font-size: 0.9rem;"></div>
                         </form>
                     </div>
                     <div id="aboutCSI">
@@ -195,10 +196,11 @@
     crossorigin="anonymous"
     ></script>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
         integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="App.js"></script>
+    <script src="formCheecker.js"></script>
 </body>
 </html>
