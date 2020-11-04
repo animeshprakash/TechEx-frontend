@@ -213,21 +213,20 @@ form{
     width: 30%;
     min-width: 40%;
 }
-/*For the slideshow*/
+/* For the slideshow*/ 
 .slideshow-container {
     display: flex;
     justify-content: center;
     height: 600px;
+    margin: 0 30px;
     background-color: rgba(255,255,255,1);
     margin-bottom: 5vh;
-  }
+  } 
 .slideshow-container>div>img {
     max-height: 600px;
     width: auto;
     height: 100%;
-    
   }
-  
   /* Hide the images by default */
   .mySlides {
     display: none;
@@ -384,6 +383,9 @@ form{
     }
     #scroll{
         font-size: 0.6rem;
+    }
+    input[type=email], input[type=text],input[type=password],input[type=tel]{
+        width: auto;
     }
 }
 @media screen and (max-width: 540px){
