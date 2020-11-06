@@ -35,8 +35,8 @@ const findSec = (index) =>{
         }  
     });
 const timeline = gsap.timeline({defaults:{ease:"power1.out"}});
-timeline.to("#scroll",{opacity:1, duration: 1,delay:.3},"-=1")
-    .fromTo("#logo",{opacity:0 ,y:"+3%"},{opacity:1,y:"0%",duration: 0.4},"-=1.3");
+timeline.to("#scroll",{opacity:1, duration: 1,delay:.3})
+    .fromTo("#logo",{opacity:0 ,y:"+3%"},{opacity:1,y:"0%",duration: 0.4},"-=1");
 
 // Code for the slideshow
 var slideIndex = 1;
