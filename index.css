@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: Helvetica;
-    font-size: 22px;
+    font-size: 24px;
 }
 button{
     font-weight: bolder;
@@ -47,6 +47,9 @@ button{
 #logoTag{
     font-size: 1rem;
     text-transform: uppercase;
+}
+.sectionContainer>div{
+    width: 80%;
 }
 .section{
     position: relative;
@@ -266,26 +269,6 @@ form{
     user-select: none;
   }
   
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
   
   /* The dots/bullets/indicators */
   .dot {
@@ -337,7 +320,7 @@ form{
         max-width: 100%;
     }
     body{
-        font-size: 18px;
+        font-size: 22px;
     }
     #logosvg{
         width: 30%;
@@ -361,7 +344,9 @@ form{
         grid-template-rows: 50% 50%;
         margin:5vw;
     }
-
+    .sectionContainer>div{
+        width: 60%;
+    }
     .slideshow-container {
         display: flex;
         justify-content: center;
@@ -380,12 +365,12 @@ form{
         width: 90vw;
       }
      .aboutCSI:first-child{
-         font-size: medium;
+         font-size: 0.1rem;
          text-align: center;
      }
      #aboutCSI{
-        margin-top: 23%;
-        font-size: 0.7rem;
+        margin-top: 5%;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 768px){
@@ -400,6 +385,9 @@ form{
         height: 20%;
     }
     #PygameP{
+        width: 100%;
+    }
+    .sectionContainer>div{
         width: 100%;
     }
     #page1{
@@ -418,7 +406,7 @@ form{
         margin-top: 0%;
     }
     body{
-        font-size: 10px;
+        font-size: 13px;
     }
     #page1{
         background-image: none;
@@ -453,7 +441,7 @@ form{
         font-size: 10px;
     }
     #designcontent{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     .sectioncontainer{
         background-color: aqua;
@@ -467,6 +455,9 @@ form{
     }
     #controllerImg{
         display: none;
+    }
+    .sectionContainer>div{
+        width: 100%;
     }
     #phoneImg{
         display: none;
