@@ -109,14 +109,14 @@ h2{
     margin-top: 9%;
 }
 .sectionContainer#s2{
-    background-color: aquamarine;
     justify-content: flex-end;
+    margin-left: 30%;
 }
 .sectionContainer>div>p{
     max-width: 600px;
 }
 .sectionContainer#s4{
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 #aboutCSI{
@@ -173,7 +173,7 @@ a:hover{
 #phoneImg{
 position: absolute;
 top:10vh;
-left :20vw;
+left :50vw;
 height: 90%;
 width: auto;
 }
@@ -231,7 +231,7 @@ input[type=submit]{
     font-size: 1rem;
     justify-content: right;
     margin-top: 5%;
-    margin-bottom: -5%;
+    margin-bottom: 7%;
 }
 form{
     grid-column: span;
@@ -357,6 +357,9 @@ form{
     .sectionContainer>div{
         width: 60%;
     }
+   #s2.sectionContainer{
+       margin-left: 0;
+   }
     .slideshow-container {
         display: flex;
         justify-content: center;
@@ -454,7 +457,6 @@ form{
         font-size: 0.8rem;
     }
     .sectioncontainer{
-        background-color: aqua;
         margin-top: 100px;
     }
     #sec1content{
