@@ -14,18 +14,18 @@ const signupAjax = async (name, email,phone, password, reenteredPassword,captcha
 
     if (res.data.status === "captcha-not-done") {
         showAlert("error", "Captcha not done!!");
-        document.querySelector("input[type=submit]").disabled = false;
+        document.querySelector("#submitBtn").disabled = false;
         grecaptcha.reset();
     } else if (res.data.status === "Failed-captcha-verification") {
         showAlert("error", "Captcha verification failed!! Try again");
-        document.querySelector("input[type=submit]").disabled = false;
+        document.querySelector("#submitBtn").disabled = false;
         grecaptcha.reset();
     } else if (res.data.status === "email_exist") {
         showAlert("error", "Email already exists!");
-        document.querySelector("input[type=submit]").disabled = false;
+        document.querySelector("#submitBtn").disabled = false;
     } else if (res.data.status === "username_exist") {
         showAlert("error", "Username already taken!");
-        document.querySelector("input[type=submit]").disabled = false;
+        document.querySelector("#submitBtn").disabled = false;
     } else if (res.data.status === 'success') {
         showAlert('success', 'Signup Successfull. Verification Mail Sent. Verify to continue');
     }
@@ -79,7 +79,7 @@ document.querySelector("form").addEventListener('submit', (e) => {
     if(checkEmail(document.getElementById('email')) &&
         checkLength(document.getElementById('password'), 6, 50) &&
         checkFieldMatch(document.getElementById("c-password"), document.getElementById('password')) )  {
-            document.querySelector("input[type=submit]").disabled = true;
+            document.querySelector("#submitBtn").disabled = true;
             grecaptcha.execute();
     }
 });

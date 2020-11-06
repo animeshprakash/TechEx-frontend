@@ -7,11 +7,9 @@ const findSec = (index) =>{
         case 4 : return(".sec5");break;
     }
 }
-window.onload=()=>{
     new fullpage('#fullpage',{
-        
         css3:true,
-        anchors:['firstpage','secondpage','thirdpage','fourthpage','fifthpage'],
+        anchors:['homepage','whatistechex','uiwithfigma','pygame','signup'],
         scrollOverflow: true,
         scrollingSpeed:2000,
         menu: '#menu',
@@ -36,11 +34,8 @@ window.onload=()=>{
                 
         }  
     });
-}
-// fullpage_api.setScrollingSpeed(1000);
 const timeline = gsap.timeline({defaults:{ease:"power1.out"}});
-timeline.fromTo("nav",{opacity: 0},{opacity: 1,duration: 1.5,})
-    .to("#scroll",{opacity:1, duration: 1,delay:.3},"-=1")
+timeline.to("#scroll",{opacity:1, duration: 1,delay:.3},"-=1")
     .fromTo("#logo",{opacity:0 ,y:"+3%"},{opacity:1,y:"0%",duration: 0.4},"-=1.3");
 
 // Code for the slideshow

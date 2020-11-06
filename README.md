@@ -31,8 +31,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contributors](#contributors-)
@@ -44,9 +42,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`animeshprakash`, `repo`, `twitter_handle`, `email`
+Here's the frontend code for TechEx 2020
+**`animeshprakash`, `TechEx-frontend`, `@csivitu`, `askcsivit@gmail.com`
 
 
 ### Built With
@@ -67,22 +64,6 @@ Clone the repo
 ```sh
 git clone https://github.com/animeshprakash/TechEx-frontend.git
 ```
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/animeshprakash/TechEx-frontend/issues ) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
