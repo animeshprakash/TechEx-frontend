@@ -11,7 +11,7 @@ const findSec = (index) =>{
         css3:true,
         anchors:['homepage','whatistechex','uiwithfigma','pygame','signup'],
         scrollOverflow: true,
-        scrollingSpeed:2000,
+        scrollingSpeed:1000,
         menu: '#menu',
         autoScrolling:true,
         scrollHorizontally: true,
@@ -25,11 +25,11 @@ const findSec = (index) =>{
                 back.pause()
             }else if(direction==="down"){
                 if(!(destination.isLast))
-                    back.fromTo(sec,{rotation: -5},{rotation: 3,duration: 1,delay: 0.7});
+                    back.fromTo(sec,{rotation: -5},{rotation: 3,duration: 1.2,delay: 0.7});
             }
             else if(direction==="up"){
                 if(!(destination.isFirst))  
-                    back.fromTo(sec,{rotation: 1},{rotation: -3,duration: 1,delay: 1});
+                    back.fromTo(sec,{rotation: 1},{rotation: -3,duration: 1.2,delay: 1});
             }
                 
         }  
