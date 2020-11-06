@@ -16,6 +16,9 @@ button{
     background-color: #f58c57;
     color: black;
 }
+h2{
+    font-size: 1.3rem;
+}
 #menu{
     position: fixed;
     display: flex;
@@ -54,7 +57,8 @@ button{
 .section{
     position: relative;
     margin-bottom: 30px;
-    display: grid;
+    display: flex;
+    justify-content: flex-start;
     
 }
 .bg{
@@ -105,6 +109,7 @@ button{
     margin-top: 9%;
 }
 .sectionContainer#s2{
+    background-color: aquamarine;
     justify-content: flex-end;
 }
 .sectionContainer>div>p{
@@ -124,8 +129,10 @@ button{
 }
 
 #sec1content{
-    max-width: 50%;
+    max-width: 45%;
     font-size: 1rem;
+    margin-top: 3%;
+    margin-bottom: 8%;
 }
 li{
     list-style: none;
@@ -221,8 +228,10 @@ input[type=submit]{
 }
 #designcontent{
     max-width: 50%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     justify-content: right;
+    margin-top: 5%;
+    margin-bottom: -5%;
 }
 form{
     grid-column: span;
@@ -337,6 +346,7 @@ form{
     }
     #sec1content{
         max-width: 100%;
+        line-height: 1.6;
     }
     .aboutAndReg{
         display: grid;
@@ -447,11 +457,14 @@ form{
         background-color: aqua;
         margin-top: 100px;
     }
+    #sec1content{
+        margin-top: 8%;
+    }
     #scroll{
         left: 29%;
     }
     .bg{
-        height: 90%;
+        height: 87%;
     }
     #controllerImg{
         display: none;
